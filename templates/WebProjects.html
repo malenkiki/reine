@@ -1,0 +1,15 @@
+<aside id="featured" class="body">
+{% for p in prj %}
+    <article>
+	<!--figure>
+		<img src="img/logo/phantastic.png" alt="Logo du projet Phantastic" />
+	</figure-->
+        <hgroup>
+        <h2>{{ p.name }}</h2>
+        <h3><a href="{{ p.slug }}">{{ p.short }}</a></h3>
+        </hgroup>
+        <p>{{ p.description }}</p>
+    </article>
+{% endfor %}
+</aside>
+

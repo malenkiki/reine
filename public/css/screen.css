@@ -1,0 +1,249 @@
+/*
+Grandement inspiré de http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/ de Enrique Ramírez
+ */
+
+@import url("reset.css");
+
+body {
+    background: WhiteSmoke;
+    color: Black;
+    font-size: 11pt;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+h2 {font-size: 1.6em}	
+h3 {font-size: 1.4em}	
+h4 {font-size: 1.2em}	
+h5 {font-size: 1.1em}	
+h6 {font-size: 1em}
+
+h2, h3, h4, h5, h6 { font-weight: 400; line-height: 1.1; margin-bottom: 0.8em; }
+
+a {outline: 0;}
+a img {border: 0px; text-decoration: none;}
+a:link, a:visited { color: Coral; padding: 0 1px; text-decoration: underline; }
+a:hover, a:active { color: OrangeRed; text-decoration: none; }
+
+p {margin-bottom: 1.15em;}
+* p:last-child {margin-bottom: 0;}
+
+strong, b {font-weight: bold;}
+em, i {font-style: italic;}
+
+
+::-moz-selection {background: Coral; color: #fff;}
+::selection {background: Coral; color: #fff;}
+
+
+/* Lists */
+ul { list-style: outside disc; margin: 1em 0 1.5em 1.5em; }
+ol { list-style: outside decimal; margin: 1em 0 1.5em 1.5em; }
+dl {margin: 0 0 1.5em 0;}
+dt {font-weight: bold;}
+dd {margin-left: 1.5em;}
+
+
+table {margin: .5em auto 1.5em auto; width: 98%;}
+thead th {padding: .5em .4em; text-align: left;}
+tbody td {padding: .5em .4em;}
+
+
+header, section, footer, aside, nav, article, figure { display: block; }
+
+.body {clear: both; margin: 0 auto; width: 960px;}
+img.right figure.right {float: right; margin: 0 0 2em 2em;}
+img.left, figure.left {float: right; margin: 0 0 2em 2em;}
+
+
+
+#banner { margin: 0 auto; padding: 0; }
+
+#banner h1 {font-size: 3.6em; line-height: 0.6;}
+#banner h1 a:link, #banner h1 a:visited {
+    color: DarkSlateGray;
+    display: block;
+    font-weight: bold;
+    margin: 0 0 0.6em 0.2em;
+    text-decoration: none;
+    width: 450px;
+}
+
+#banner h1 a:hover, #banner h1 a:active { background: none; color: OrangeRed; text-shadow: none; }
+
+#banner h1 strong {font-size: 0.36em; font-weight: normal;}
+
+
+#banner nav.top { height:2em; line-height:2em; margin: 0 auto 2em auto; display:block; font-size: 0.9em; text-align: right; width: 960px;}
+#banner nav.top ul {list-style: none; margin: 0 auto; width: 960px;}
+#banner nav.top li {display: inline; margin: 0 0 0 1em;}
+
+#banner nav.main {
+    background: DarkSlateGray;
+    background-image: -webkit-linear-gradient(top, DarkSlateGray 0%, Black 100%);
+    background-image:    -moz-linear-gradient(top, DarkSlateGray 0%, Black 100%);
+    background-image:     -ms-linear-gradient(top, DarkSlateGray 0%, Black 100%);
+    background-image:      -o-linear-gradient(top, DarkSlateGray 0%, Black 100%);
+    background-image:         linear-gradient(top, DarkSlateGray 0%, Black 100%);
+    font-size: 1.15em;
+    height: 2.5em;
+    line-height: 2.5px;
+    margin: 0 auto 2em auto;
+    padding: 0;
+    text-align: center;
+    width: 960px;
+
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+#banner nav.main ul {list-style: none; margin: 0 auto; width: 960px;}
+#banner nav.main li {float: left; display: inline; margin: 0;}
+
+#banner nav.main a:link, #banner nav.main a:visited {
+    color: GhostWhite;
+    display: inline-block;
+    height: 2.5em;
+    line-height:2.5em;
+    padding: 0 1em;
+    text-decoration: none;
+}
+#banner nav.main a:hover, #banner nav.main a:active,
+#banner nav.main .active a:link, #banner nav.main .active a:visited {
+    background: OrangeRed;
+    background-image: -webkit-linear-gradient(top, OrangeRed 0%, Coral 100%);
+    background-image:    -moz-linear-gradient(top, OrangeRed 0%, Coral 100%);
+    background-image:     -ms-linear-gradient(top, OrangeRed 0%, Coral 100%);
+    background-image:      -o-linear-gradient(top, OrangeRed 0%, Coral 100%);
+    background-image:         linear-gradient(top, OrangeRed 0%, Coral 100%);
+    color: White;
+}
+
+#banner nav.main li:first-child a {
+    border-top-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -webkit-border-top-left-radius: 5px;
+
+    border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+}
+
+
+
+#featured {
+    background: White;
+    margin-bottom: 2em;
+    overflow: hidden;
+    padding: 20px;
+    width: 920px;
+
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+#featured figure {
+    border: 2px solid #eee;
+    float: right;
+    margin: 0.786em 2em 0 5em;
+    width: 248px;
+}
+#featured figure img {display: block; float: right;}
+
+#featured h2 {color: Coral; font-size: 1.7em; margin-bottom: 0.3em;}
+#featured h3 {font-size: 1.4em; margin-bottom: 0.5em;}
+
+#featured h3 a:link, #featured h3 a:visited {color: DarkSlateGray; text-decoration: none;}
+
+#content {
+    background: White;
+    margin-bottom: 2em;
+    overflow: hidden;
+    padding: 20px;
+    width: 920px;
+
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+
+#extras {margin: 0 auto 3em auto; overflow: hidden;}
+#extras ul {list-style: none; margin: 0;}
+#extras li {border-bottom: 1px solid White;}
+#extras h2 { color: Coral; font-size: 1.4em; margin-bottom: 0.25em; padding: 0 3px; }
+
+#extras a:link, #extras a:visited {
+    color: DarkSlateGray;
+    display: block;
+    border-bottom: 1px solid Gainsboro;
+    text-decoration: none;
+    padding: 0.3em 0.25em;
+}
+
+#extras .activityroll { width: 960px; overflow:hidden;}
+#extras .activityroll ul li a abbr { display:inline-block; width: 11em; color: Gray; }
+#extras .activityroll ul li a strong.revision { font-weight:normal; color:Coral; }
+#extras .activityroll ul li a strong.ticket {font-weight:normal; color:Coral; }
+#extras .activityroll ul li a strong.author { color:Coral; color: Gray; }
+#extras .activityroll ul li a em { color:gray; color: Gray; font-size:0.9em; margin-left:1em; }
+
+#extras .activityroll ul li a:hover { background-color: AntiqueWhite; }
+#extras .activityroll ul li a:hover strong.revision { color: OrangeRed; }
+#extras .activityroll ul li a:hover strong.ticket { color: OrangeRed; }
+
+#extras li:last-child, #extras li:last-child a {border: 0}
+
+
+#about {
+    background: DarkSlateGray;
+    font-style: normal;
+    margin-bottom: 2em;
+    overflow: hidden;
+    padding: 20px;
+    text-align: left;
+    width: 920px;
+    color: Gray;
+
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+#about .primary {float: left; width: 165px;}
+#about .primary strong {color: Coral; display: block; font-size: 1.5em;}
+#about .photo {float: left; margin: 5px 20px;}
+
+#about .url:link, #about .url:visited {color:GhostWhite; text-decoration: none;}
+
+#about .bio a:link, #about .bio a:visited {color:GhostWhite; text-decoration: none;}
+#about .bio a:hover {color:White; text-decoration: none;}
+
+#about .bio {float: right; width: 600px;}
+
+#contentinfo {padding-bottom: 2em; text-align: right;}
+
+
+.hentry { border-bottom: 1px solid #eee; padding: 1.5em 0; }
+li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
+#content > .hentry {padding: 1em 0;}
+
+.entry-title {font-size: 1.4em; margin-bottom: 0;}
+.entry-title a:link, .entry-title a:visited {text-decoration: none;}
+
+.hentry .post-info * {font-style: normal;}
+
+.hentry footer {margin-bottom: 2em;}
+.hentry footer address {display: inline;}
+#posts-list footer address {display: block;}
+
+#posts-list {list-style: none; margin: 0;}
+#posts-list .hentry {padding-left: 200px; position: relative;}
+#posts-list footer { left: 10px; position: absolute; top: 1.5em; width: 190px; }
+
+

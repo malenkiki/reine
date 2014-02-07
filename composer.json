@@ -1,0 +1,15 @@
+{
+    "require": {
+        "slim/slim": "2.2.0",
+        "slim/extras": "2.0.*",
+        "jbroadway/urlify": "1.0.0-stable",
+        "dflydev/markdown": "v1.0.2",
+        "twig/twig": "v1.12.2",
+        "twig/extensions": "v1.0.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Malenki\\Ruche": "src/"
+        }
+    }
+}
